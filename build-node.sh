@@ -77,25 +77,8 @@ tar -xzf $LINKTONODE;
 #Remove the tar after extracing it.
 rm $LINKTONODE;
 
-#remove older version of node:
-#rm -R -f /opt/nodejs/;
-
-#remove symlinks
-#rm /usr/bin/node /usr/sbin/node /sbin/node /sbin/node /usr/local/bin/node /usr/bin/npm /usr/sbin/npm /sbin/npm /usr/local/bin/npm 2> /dev/null;
 #This next line will copy Node over to the appropriate folder.
 mv ./$NODEFOLDER ../nodejs-dpkg/usr
-
-#This line will remove the nodeJs tar we downloaded.
-#rm -R -f /root/tempNode/$LINKTONODE/;
-#Create symlinks to node && npm
-#sudo ln -s /opt/nodejs/bin/node /usr/bin/node; sudo ln -s /opt/nodejs/bin/node /usr/sbin/node;
-#sudo ln -s /opt/nodejs/bin/node /sbin/node; sudo ln -s /opt/nodejs/bin/node /usr/local/bin/node;
-#sudo ln -s /opt/nodejs/bin/npm /usr/bin/npm;
-#sudo ln -s /opt/nodejs/bin/npm /usr/sbin/npm; sudo ln -s /opt/nodejs/bin/npm /sbin/npm;
-#sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
-#rm -R -f /root/tempNode/;
-#su pi;
-#cd ~/ && rm -R NodeJs-Raspberry-Pi-Arm9/;
 
 cd ${ROOT}
 #chmod 0755 nodejs-dpkg/DEBIAN/preinst
@@ -108,3 +91,6 @@ dpkg-deb -v --build nodejs-dpkg nodejs-${VERSION}.deb
 echo ""
 echo "reading debian package: \n"
 dpkg-deb --info nodejs-${VERSION}.deb
+
+rm -fr nodejs-dpkg
+rm -fr tempNode
