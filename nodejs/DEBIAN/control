@@ -1,7 +1,0 @@
-Package: nodejs
-Architecture: all
-Maintainer: Kevin
-Depends: debconf (>= 0.5.00)
-Priority: optional
-Version: 9.x
-Description: kevin's node package
