@@ -75,7 +75,7 @@ mv ./$NODEFOLDER ../nodejs-dpkg/usr
 
 cd ${ROOT}
 #chmod 0755 nodejs-dpkg/DEBIAN/preinst
-chmod 0755 nodejs-dpkg/DEBIAN/postinst
+# chmod 0755 nodejs-dpkg/DEBIAN/postinst
 
 
 echo "building Nodejs ${VERSION}"
