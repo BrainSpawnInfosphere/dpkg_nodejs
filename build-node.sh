@@ -16,13 +16,6 @@ ROOT=`pwd`
 
 VERSION=$1
 
-
-# clean up old build
-# for FOLDER in bin include lib share
-# do
-    # rm -fr ./nodejs-dpkg/$FOLDER
-# done
-
 # if the dir exists, remove it ... going to dynamically create it
 if [[ -d "nodejs-dpkg" ]]; then
 	rm -fr nodejs-dpkg
