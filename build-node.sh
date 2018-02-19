@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]
     exit
 fi
 
-if [[ $# -ne 2 ]]; then
+if [[ $# -ne 1 ]]; then
     echo "Please supply an Nodejs version number"
     echo "ex: ./build-pkg.sh 3.4.0"
     exit
